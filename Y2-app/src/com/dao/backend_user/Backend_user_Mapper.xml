@@ -3,5 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.backend_user.Backend_user_Mapper">
+	<select id="login" resultType="backend_user">
+		SELECT u.*,d.valueName as userTypeName from
+		backend_user as u, data_dictionary as d where u.userType = d.valueId
+		and d.TypeCode='USER_TYPE' and u.userCode = #{userCode}
 
+	</select>
 </mapper>

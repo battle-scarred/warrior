@@ -12,6 +12,15 @@ public class Backend_user {
 	private int modifyBy;
 	private Date modifyDate;
 	private String userPassword;
+	
+	
+	private String userTypeName;			//名称
+	public String getUserTypeName() {
+		return userTypeName;
+	}
+	public void setUserTypeName(String userTypeName) {
+		this.userTypeName = userTypeName;
+	}
 	public int getId() {
 		return id;
 	}

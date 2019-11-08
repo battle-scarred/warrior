@@ -50,6 +50,6 @@
 
   <!-- 欢迎页面 -->
   <welcome-file-list>
-  	<welcome-file>/jsp/devlogin.jsp</welcome-file>
+  	<welcome-file>/jsp/index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

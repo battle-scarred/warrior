@@ -6,4 +6,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="login" resultType="dev_user">
 		select * from dev_user <where> devCode = #{devCode}</where>
 	</select>
+	
 </mapper>

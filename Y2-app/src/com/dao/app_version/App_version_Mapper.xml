@@ -3,5 +3,36 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.app_version.App_version_Mapper">
+	<select id="getList" resultType="app_version">
 
+		
+
+		select v.*,i.softwareName as appName,d.valueName as publishStatusName from
+		app_version as
+		v,app_info as i ,data_dictionary as d where d.valueId = v.publishStatus and
+		v.appId
+		= #{id} and i.id=#{id} and d.typeCode='PUBLISH_STATUS'
+	</select>
+
+	<insert id="add" parameterType="app_version">
+		INSERT
+		app_version(appId,versionNo,versionInfo,publishStatus,downloadLink,versionSize,createdBy,creationDate,modifyBy,creationDate,modifyBy,modifyDate,apkLocPath,apkFileName)
+
+		VALUES(#{appId},#{versionNo},#{versionInfo},#{publishStatus},#{downloadLink},#{versionSize},#{createdBy},#{creationDate},#{modifyBy},#{creationDate},#{modifyBy},#{modifyDate},#{apkLocPath},#{apkFileName})
+
+	</insert>
+
+	<select id="getClassversion" resultType="app_version">
+
+		select * from
+		app_version where appId = #{appId} ORDER BY id DESC limit 0,1
+	</select>
+	
+	<select id="seletcID" resultType="app_version">
+		select * from app_version where id = #{vid}
+	</select>
+	
+	<update id="update" parameterType="app_version">
+		update set versionInfo=#{versionInfo},versionSize=#{versionSize} where id=#{id}
+	</update>
 </mapper>

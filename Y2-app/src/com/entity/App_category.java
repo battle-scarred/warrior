@@ -5,7 +5,7 @@ import java.util.Date;
 public class App_category {
 	private int id;
 	private String categoryCode;
-	private String cateforyName;
+	private String categoryName;
 	private int parentId;
 	private int createdBy;
 	private Date creationTime;
@@ -23,11 +23,12 @@ public class App_category {
 	public void setCategoryCode(String categoryCode) {
 		this.categoryCode = categoryCode;
 	}
-	public String getCateforyName() {
-		return cateforyName;
+	
+	public String getCategoryName() {
+		return categoryName;
 	}
-	public void setCateforyName(String cateforyName) {
-		this.cateforyName = cateforyName;
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 	public int getParentId() {
 		return parentId;

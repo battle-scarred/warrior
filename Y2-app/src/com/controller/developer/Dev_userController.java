@@ -19,7 +19,6 @@ public class Dev_userController {
 	
 	@RequestMapping("/dologin")
 	public String login(@RequestParam(value="devCode",required=false)String devCode,@RequestParam(value="devPassword",required=false)String devPassword, HttpSession session,Model model){
-		
 		Dev_user user = userService.login(devCode);
 		if(user !=null){
 			if(devPassword.equals(user.getDevPassword())){

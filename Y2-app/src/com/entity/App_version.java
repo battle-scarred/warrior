@@ -14,8 +14,31 @@ public class App_version {
 	private Date creationDate;
 	private int modifyBy;
 	private Date modifyDate;
-	private String apKLocPath;
-	private String apKFileName;
+	private String apkLocPath;
+	
+	
+	private String appName;		//软件名称
+	private String publishStatusName;		//发布信息
+	
+	private String apkFileName;
+	public String getApkFileName() {
+		return apkFileName;
+	}
+	public void setApkFileName(String apkFileName) {
+		this.apkFileName = apkFileName;
+	}
+	public String getPublishStatusName() {
+		return publishStatusName;
+	}
+	public void setPublishStatusName(String publishStatusName) {
+		this.publishStatusName = publishStatusName;
+	}
+	public String getAppName() {
+		return appName;
+	}
+	public void setAppName(String appName) {
+		this.appName = appName;
+	}
 	public int getId() {
 		return id;
 	}
@@ -82,16 +105,11 @@ public class App_version {
 	public void setModifyDate(Date modifyDate) {
 		this.modifyDate = modifyDate;
 	}
-	public String getApKLocPath() {
-		return apKLocPath;
+	public String getApkLocPath() {
+		return apkLocPath;
 	}
-	public void setApKLocPath(String apKLocPath) {
-		this.apKLocPath = apKLocPath;
+	public void setApkLocPath(String apkLocPath) {
+		this.apkLocPath = apkLocPath;
 	}
-	public String getApKFileName() {
-		return apKFileName;
-	}
-	public void setApKFileName(String apKFileName) {
-		this.apKFileName = apKFileName;
-	}
+	
 }
